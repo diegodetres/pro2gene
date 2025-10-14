@@ -1,0 +1,1 @@
+**prot2gene** is a computational method that maps intrinsically disordered protein regions (IDRs) to genomic coordinates by integrating biophysical predictions with genomic datasets, facilitating systematic protein-to-gene analyses.
