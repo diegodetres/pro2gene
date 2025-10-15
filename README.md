@@ -1,16 +1,16 @@
-# prot2gene 🍗 ➡️ 🧬
+# pro2gene 🍗 ➡️ 🧬
 
-**prot2gene** is a computational pipeline to map protein sequences to genomic coordinates, providing a simple and generalizable framework for integrative proteogenomic analysis.
+**pro2gene** is a computational pipeline to map protein sequences to genomic coordinates, providing a simple and generalizable framework for integrative proteogenomic analysis.
 
 This repository includes a **pre-computed CDS-to-protein database for all protein-coding transcripts in the human genome**: gencode_cds_coordinates.zip 
 
 This file can be used directly to map protein sequences to genomic coordinates in **2 steps**: 
 
-1. Define the **prot2gene function**:
+1. Define the **pro2gene function**:
 
 ```python
 
-def prot2gene(row, query_protein):
+def pro2gene(row, query_protein):
     """
     Given a row with 'cds_sequence', 'protein_sequence', and 'cds_coordinates',
     find the genomic CDS coordinates corresponding to a peptide subsequence.
@@ -97,7 +97,7 @@ gencode_cds_coordinates = pd.read_csv("gencode_cds_coordinates.zip", compression
 
 ```
 
-Once the **prot2gene function** is defined and **gencode_cds_coordinates dataframe** is loaded, **prot2gene can be used to map the genomic coordinates for any protein sequence in the human genome**. 
+Once the **pro2gene function** is defined and **gencode_cds_coordinates dataframe** is loaded, **pro2gene can be used to map the genomic coordinates for any protein sequence in the human genome**. 
 
 **Example usage:**
 
@@ -105,7 +105,7 @@ Once the **prot2gene function** is defined and **gencode_cds_coordinates datafra
 query_protein = "DLVILLYETALLSSGFSLEDPQTHANRIYRMIKLGLGIDEDDPTADDTSAAVTEEMPPLE" # input any protein sequence here
 
 gencode_cds_coordinates["matched_cds_coords"] = gencode_cds_coordinates.apply( 
-    lambda row: prot2gene(row, query_protein), 
+    lambda row: pro2gene(row, query_protein), 
     axis=1
 )                                                                              # apply find_cds_coords_for_protein function to gencode_cds_coordinates
 
@@ -123,7 +123,7 @@ matches[["gene_name", "seqname", "strand", "gene_id", "transcript_id", "protein_
 
 **The provided function and pre-computed dataset work for identifying the genomic coordinates for any annotated protein sequence from the human reference genome (GENCODE v44).** 
 
-For additional datasets, the prot2gene.ipynb notebook includes code for: 
+For additional datasets, the pro2gene.ipynb notebook includes code for: 
 
 1. Extracting protein-coding regions from the human reference genome annotation file (GTF)
 2. Generating a dataset of protein translations directly from coding sequences (CDS) in the reference genome
@@ -284,11 +284,11 @@ This generates the final **gencode_cds_coordinates** dataframe containing the pr
 
 # Mapping protein sequences to genomic CDS coordinates
 
-After generating the **gencode_cds_coordinates** dataframe, the **prot2gene** function is defined as: 
+After generating the **gencode_cds_coordinates** dataframe, the **pro2gene** function is defined as: 
 
 ```python
 
-def prot2gene(row, query_protein):
+def pro2gene(row, query_protein):
     """
     Given a row with 'cds_sequence', 'protein_sequence', and 'cds_coordinates',
     find the genomic CDS coordinates corresponding to a peptide subsequence.
@@ -374,7 +374,7 @@ An example is shown below:
 query_protein = "DLVILLYETALLSSGFSLEDPQTHANRIYRMIKLGLGIDEDDPTADDTSAAVTEEMPPLE"
 
 gencode_cds_coordinates["matched_cds_coords"] = gencode_cds_coordinates.apply(
-    lambda row: prot2gene(row, query_protein),
+    lambda row: pro2gene(row, query_protein),
     axis=1
 )
 
