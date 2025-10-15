@@ -131,5 +131,7 @@ For additional datasets, the prot2gene.ipynb notebook includes code for:
 
 This method provides a simple and generalizable framework for mapping protein sequences to genomic coordinates across multiple datasets. 
 
+Below is step-by-step description of the workflow used to build the pre-computed dataset from the human reference genome.
+
 # Extracting protein-coding regions from the human reference genome annotation file (GTF)
 
