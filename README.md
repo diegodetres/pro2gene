@@ -121,7 +121,7 @@ matches[["gene_name", "seqname", "strand", "gene_id", "transcript_id", "protein_
 1387224	HSP90AA1	chr14	-	ENSG00000080824.19	ENST00000334701.11	ENSP00000335153.7	[[[102081751, 102081821], [102082111, 10208221...
 ```
 
-The provided function and pre-computed dataset work for identifying the genomic coordinates for any annotated protein sequence from the human reference genome (GENCODE v44). 
+**The provided function and pre-computed dataset work for identifying the genomic coordinates for any annotated protein sequence from the human reference genome (GENCODE v44).** 
 
 For additional datasets, the prot2gene.ipynb notebook includes code for: 
 
