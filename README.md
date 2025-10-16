@@ -1,4 +1,4 @@
-# pro2gene 🍗 ➡️ 🧬
+# pro2gene 
 
 **pro2gene** is a computational pipeline to map protein sequences to genomic coordinates, providing a simple and generalizable framework for integrative proteogenomic analysis.
 
